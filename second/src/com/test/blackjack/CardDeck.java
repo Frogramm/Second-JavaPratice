@@ -9,7 +9,7 @@ public class CardDeck {
 	private void init() {
 		for(int i = 0 ; i < Card.PATTERNS.length ; i++) {
 			for(int z = 1 ; z <= 13 ; z++) {
-				arr.add(new Card(Card.PATTERNS[i],getDeno(z)));
+				arr.add(new Card(Card.PATTERNS[i],getDeno(z),getPoint(z)));
 //				String pattern = Card.PATTERNS[i];
 //				String deno = getDeno(z);
 //				Card c = new Card(pattern,deno);
@@ -27,6 +27,11 @@ public class CardDeck {
 			return String.valueOf(num);
 	}
 	}
+		
+	private int getPoint(int num) {
+		return num > 10 ? 10 : num;
+	}
+	
 	@Override
 	public String toString() {
 		for(Card card : arr) {
@@ -37,7 +42,7 @@ public class CardDeck {
 	
 	
 	public Card getCard() {
-		int rIndex = (int)(Math.random()* arr.size()); //0~51 까지 랜덤값 출력
+		int rIndex = (int)(Math.random()* arr.size()); //랜덤값 호출 
 		return arr.remove(rIndex);		 // rIndex번째 값 삭제와 동시에 리턴
 	}
 }
