@@ -4,16 +4,14 @@ package com.test.blackjack;
 public class Game {
 	public static void main(String[] args) {
 		CardDeck cd = new CardDeck();
+		Dealer dealer = new Dealer();
 		Gamer gamer = new Gamer();
-		Dealer deal = new Dealer();
-//		Card c = cd.getCard(); // 랜덤한 카드를 1장 리턴, and 카드덱에서 삭제
-		gamer.receiveCard(cd.getCard());
-		gamer.receiveCard(cd.getCard());
-		gamer.receiveCard(cd.getCard());
-		deal.receiveCard(cd.getCard());
-		deal.receiveCard(cd.getCard());
-		deal.receiveCard(cd.getCard());
-		gamer.openCards();
-		deal.openCards();
+		for(int i = 0 ; i < 2 ; i ++) {
+			dealer.receiveCard(cd.getCard());
+			gamer.receiveCard(cd.getCard());
 		}
+		dealer.drawCards(cd);
+		gamer.drawCards(cd);
+		Rule.WhoIsWin(gamer, dealer);
+	}
 }

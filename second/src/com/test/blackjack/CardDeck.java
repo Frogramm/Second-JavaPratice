@@ -25,7 +25,7 @@ public class CardDeck {
 		case 13: return "K";
 		default:
 			return String.valueOf(num);
-	}
+		}
 	}
 		
 	private int getPoint(int num) {
@@ -34,8 +34,8 @@ public class CardDeck {
 	
 	@Override
 	public String toString() {
-		for(Card card : arr) {
-			System.out.println(card);
+		for(Card c : arr) {
+			System.out.println(c);
 		}
 		return "";
 	}
@@ -45,4 +45,5 @@ public class CardDeck {
 		int rIndex = (int)(Math.random()* arr.size()); //랜덤값 호출 
 		return arr.remove(rIndex);		 // rIndex번째 값 삭제와 동시에 리턴
 	}
+
 }
