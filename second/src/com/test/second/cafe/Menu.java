@@ -8,10 +8,10 @@ public class Menu {
 		init();
 	}
 	public List<MenuItem> init() {
-		mArr.add(new MenuItem("아메리카노",1500));
-		mArr.add(new MenuItem("카푸치노",2000));
-		mArr.add(new MenuItem("카라멜 마끼야또",2500));
-		mArr.add(new MenuItem("에스프레소",2500));
+		mArr.add(new MenuItem("아메리카노",1500));//0
+		mArr.add(new MenuItem("카푸치노",2000));//1
+		mArr.add(new MenuItem("카라멜 마끼야또",2500));//2
+		mArr.add(new MenuItem("에스프레소",2500));//3
 		return mArr;
 		}
 	

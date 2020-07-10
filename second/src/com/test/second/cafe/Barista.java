@@ -1,0 +1,9 @@
+package com.test.second.cafe;
+
+public class Barista{
+	public Coffee makeCoffee(MenuItem mi) {
+//		Coffee coffee = new Coffee(mi);
+//		return coffee;
+		return new Coffee(mi);
+	}
+}
